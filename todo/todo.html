@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Potta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Libre+Baskerville&family=Potta+One&display=swap" rel="stylesheet">
+    <title>ToDo</title>
+</head>
+<body >
+    <div class="contaier">
+        <nav class="navbar navbar-expand-sm">
+            <a class="navbar-brand" href="todo.html">
+                <i class="fas fa-clipboard-list"></i>
+           </a>
+           <span class="navbar-text text-dark">Do It!!!</span>
+           <p id="dispdatetime"></p>
+         </nav>
+             
+         <button onclick="username()" id="btne" class="btn-dark">Try it for user experience </button>
+         <p id="usertext"></p>
+            <div class="addtask">
+                    <input type="text" placeholder="Add a task">
+                    <button id="Btn"><i class="fas fa-plus"></i></button>
+            </div>
+        <h3>Not Completed</h3>
+        <ul class="notcompleted">
+                
+        </ul>
+        <h3>Completed</h3>
+        <ul class="completed">
+               
+        </ul>
+
+    </div>
+    <br>
+    <br>
+    
+    
+    <script src="todo.js"></script>
+</body>
+</html>
