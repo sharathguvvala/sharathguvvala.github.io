@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="matstyle.css">
+    <script src="script.js"></script>
+    <title>Matches</title>
+</head>
+<body>
+    <nav class="navbar rounded navbar-expand-md bg-dark mx-3 my-3 shadow-sm">
+        <a class="navbar-brand mr-4"><img src="bcci.png" style="width: 40px;"></a>
+        <span class="navbar-text text-primary">Indian Cricket Team</span>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar" id="toggler">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsenavbar">
+          <ul class="navbar-nav">
+                <li class="nav-item" style="margin: 0px 130px 0px 30px;">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item" style="margin: 0px 130px 0px 30px;" >
+                  <a class="nav-link" href="players.html">Players</a>
+                </li>
+                <li class="nav-item" style="margin: 0px 30px 0px 30px;">
+                  <a class="nav-link active" href="matches.html">Matches</a>
+                </li>
+          </ul>
+        </div>
+    </nav>
+    <p>India's Memorable Matches</p>
+    <div class="carousel slide" id="slides" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+            <li data-target="#slides" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="1983wc.jpg">
+               <div class="carousel-caption">
+                   <h2>1983 World Cup Final</h2>
+                   <a href="https://www.espncricinfo.com/series/prudential-world-cup-1983-60832/india-vs-west-indies-final-65090/full-scorecard" target="_blank" class="btn btn-primary">For Match Info</a>
+               </div> 
+            </div>
+            <div class="carousel-item">
+                <img src="2001test.jpg">
+                <div class="carousel-caption">
+                    <h2>2001 Kolkata Test</h2>
+                    <a href="https://www.espncricinfo.com/series/australia-tour-of-india-2000-01-61425/india-vs-australia-2nd-test-63920/full-scorecard" target="_blank" class="btn btn-primary">For Match Info</a>   
+                </div> 
+             </div>
+             <div class="carousel-item">
+                <img src="2003test.jpg">
+                <div class="carousel-caption">
+                    <h2>2003 Adelaide Test</h2>
+                    <a href="https://www.espncricinfo.com/series/india-tour-of-australia-2003-04-62294/australia-vs-india-2nd-test-64060/full-scorecard" target="_blank" class="btn btn-primary">For Match Info</a>   
+                </div> 
+             </div>
+             <div class="carousel-item">
+                <img src="2011wc.jpg">
+                <div class="carousel-caption">
+                    <h2>2011 World Cup Final</h2>
+                    <a href="https://www.espncricinfo.com/series/icc-cricket-world-cup-2010-11-381449/india-vs-sri-lanka-final-433606/full-scorecard" target="_blank" class="btn btn-primary">For Match Info</a>   
+                </div> 
+             </div>
+             <div class="carousel-item">
+                <img src="2021test.jpg">
+                <div class="carousel-caption">
+                    <h2>2021 Sydney Test</h2>
+                    <a href="https://www.espncricinfo.com/series/india-in-australia-2020-21-1223867/australia-vs-india-3rd-test-1223871/full-scorecard" target="_blank" class="btn btn-primary">For Match Info</a>     
+                </div> 
+             </div>
+        </div>
+        <a class="carousel-control-prev" href="#slides" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#slides" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+    </div>
+    <hr>
+    <p>India's Schedule In 2021</p>
+    <div class="container container-sm container-md">
+    <table class="table table-responsive-md table-responsive-sm table-primary table-striped my-3 ">
+        <tr>
+            <td>
+                <c1>Feb 5 - March 28</c1>
+            </td>
+            <td>
+                <c2>England tour of India (4 TEST, 3 ODI, 5 T20I)</c2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <c1>Aug 4-Sep 14</c1>
+            </td>
+            <td>
+                <c2>India tour of England (5 TEST)</c2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <c1>Oct-Nov</c1>
+            </td>
+            <td>
+                <c2>T20 Word Cup in India</c2>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+              <span>
+                  Indian Cricket Team
+              </span>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+              <a href="https://en.wikipedia.org/wiki/India_national_cricket_team" target="_blank" class="fab fa-wikipedia-w" id="wikipedia"></a>
+              <a href="https://twitter.com/bcci?lang=en" target="_blank" class="fab fa-twitter" id="twitter"></a>
+              <a href="https://www.instagram.com/indiancricketteam/feed/?hl=en" target="_blank" class="fab fa-instagram" id="instagram"></a>
+              <a href="https://www.facebook.com/IndianCricketTeam/" target="_blank" class="fab fa-facebook" id="facebook"></a>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <h6 style="float: right;"> &copy Design by sharath 2021&nbsp;&nbsp;&nbsp;&nbsp;</h6>
+            </div>
+        </div>
+      </div>
+
+    
+</body>
+</html>

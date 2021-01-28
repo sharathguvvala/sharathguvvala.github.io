@@ -1,0 +1,98 @@
+.nav-link:hover{
+    color: greenyellow
+}
+.nav-link.active{
+    color: greenyellow;
+}
+.custom-toggler.navbar-toggler{
+    border-color: greenyellow;
+}
+.custom-toggler .navbar-toggler-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(18, 248, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+}
+#instagram{
+    color:  #c32aa3 ;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 0px 20px 0px 30px;
+}
+#facebook{
+    color: #1877f2;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 0px 20px 0px 20px;
+}
+#twitter{
+    color:  #1da1f2;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 0px 0px 0px 20px;
+}
+h3{
+    color: rgb(248, 31, 2);
+    font-weight: 1000;
+}
+p{
+    color: rgb(46, 253, 28);
+}
+.footer span{
+    font-size: larger;
+    margin-left: 40px;
+    padding-bottom: 20px;
+}
+.footer a{
+    float: right;
+    margin: 5px 20px 8px 20px;
+    text-decoration: none;
+}
+@media only screen and (max-width:500px){
+    .footer a{
+        float: none;
+        margin: 10px 20px 10px 20px;
+    }
+    .footer span{
+        margin-left: 20px;
+    }
+}
+#facebookp{
+    color: #1877f2;
+    font-size: 30px;
+    text-decoration: none;
+}
+#instagramp{
+    color:  #c32aa3 ;
+    font-size: 30px;
+    text-decoration: none;
+}
+#twitterp{
+    color:  #1da1f2;
+    font-size: 30px;
+    text-decoration: none;
+}
+#wikipediap{
+    color:  #1da1f2;
+    font-size: 30px;
+    text-decoration: none;
+}
+#facebookp:hover{
+    font-size: 35px;
+}
+#instagramp:hover{
+    font-size: 35px;
+}
+#twitterp:hover{
+    font-size: 35px;
+}
+#wikipediap:hover{
+    font-size: 35px;
+}
+@media only screen and (max-width:500px){
+    .card-img-top{
+        height: 300px;
+    }
+}
+@media only screen and (min-width:500px){
+    .card-img-top{
+        height: 500px;
+    }
+}

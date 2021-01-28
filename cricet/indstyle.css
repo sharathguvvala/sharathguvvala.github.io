@@ -1,0 +1,80 @@
+body{
+    background-color:lightyellow;
+}
+.nav-link:hover{
+    color: greenyellow
+}
+.nav-link.active{
+    color: greenyellow;
+}
+.custom-toggler.navbar-toggler{
+    border-color: greenyellow;
+}
+.custom-toggler .navbar-toggler-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(18, 248, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+}
+.container img{
+    width: 500px;
+    height: 400px;
+}
+.container p{
+    color: green;
+}
+.footer span{
+    font-size: larger;
+    margin-left: 40px;
+    padding-bottom: 20px;
+}
+.footer a{
+    float: right;
+    margin: 5px 20px 8px 20px;
+    text-decoration: none;
+}
+@media only screen and (max-width:500px){
+    .footer a{
+        float: none;
+        margin: 10px 20px 10px 20px;
+    }
+    .footer span{
+        margin-left: 20px;
+    }
+} 
+#facebook{
+    color: #1877f2;
+    font-size: 30px;
+    text-decoration: none;
+}
+#instagram{
+    color:  #c32aa3 ;
+    font-size: 30px;
+    text-decoration: none;
+}
+#twitter{
+    color:  #1da1f2;
+    font-size: 30px;
+    text-decoration: none;
+}
+#wikipedia{
+    color:  #1da1f2;
+    font-size: 30px;
+    text-decoration: none;
+}
+#facebook:hover{
+    font-size: 35px;
+}
+#instagram:hover{
+    font-size: 35px;
+}
+#twitter:hover{
+    font-size: 35px;
+}
+#wikipedia:hover{
+    font-size: 35px;
+}
+@media only screen and (max-width:500px){
+    .container img{
+        width: 100%;
+        height: 250px;
+    }
+}
+  
