@@ -1,8 +1,15 @@
+if(window.screen.width<500) {
+    if(username.length<8){
+        usertext.style.fontSize = "5vh"
+    }
+}
 
 function username(){
     username = prompt("Please enter your name","stranger");
     document.getElementById("usertext").innerHTML ="Hello,"+username;
 }
+
+
 const input = document.querySelector('input');
 const btn = document.querySelector('.addtask > button');
 btn.addEventListener('click', addTask);

@@ -4,6 +4,8 @@
 body{
     height: 100vh;
     background-image: url(todo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h3{
     font-family: 'Hachi Maru Pop', cursive;
@@ -109,9 +111,11 @@ h3{
     }
     .notcompleted  li{
         font-size: 6vw;
+        padding: 3px;
     }
     .completed li{
         font-size: 6vw;
+        padding: 3px;
     }
     .icon{
         font-size: 30px;
@@ -127,7 +131,7 @@ h3{
 }
 #usertext{
     padding: 15px 0 0 20px;
-    font-size: 4vw;
+    font-size: 5vh;
     font-family: 'Shadows Into Light', cursive;
 }
 #btne{
