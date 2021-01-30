@@ -67,6 +67,8 @@ h3{
     font-size: bolder;
     font-size: 30px;
     color:rgb(26, 128, 5);
+    transition: add 2s;
+    transition-timing-function: ease-in;
 }
 .completed {
     list-style: none;
@@ -136,4 +138,18 @@ h3{
 #btne:focus{
     outline: none;
     border: none;
+}
+li{
+    opacity: 0;
+    animation: new-item-animation .4s linear forwards;
+}
+@keyframes new-item-animation{
+    from{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

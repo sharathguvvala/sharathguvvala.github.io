@@ -27,6 +27,7 @@ function addTask(task){
 
     checkbtn.innerHTML = '<i class="fa fa-check"></i>';
     trashbtn.innerHTML = '<i class="fa fa-trash"></i>';
+    console.log(checkbtn)
 
     if(input.value==''){
         alert('Please enter a valid task');
@@ -43,12 +44,21 @@ function addTask(task){
 
     checkbtn.addEventListener('click',function(){
         const completedtask = this.parentNode;
-        var a = confirm('Are you sure that the task is completed!!!')
-        if(a==true){
-            completedtask.remove();
-            Completed.appendChild(completedtask);
-            checkbtn.style.display='none';
-        }
+        //var a = confirm('Are you sure that the task is completed!!!')
+        //if(a==true){
+            
+            setTimeout(function(){
+                //completedtask.remove();
+               /* $(document).ready(function(){
+                    $("button").click(function(){
+                        $(this.parentNode).fadeOut(3000);
+                    })
+                })*/
+                Completed.appendChild(completedtask);
+                checkbtn.style.display='none';
+            },500)
+           
+       // }
         
     });
 
@@ -56,14 +66,45 @@ function addTask(task){
         const deltask = this.parentNode;
         var b = confirm('Are you sure to delete the task!!!')
         if(b==true){
-            deltask.remove();
-        }   
+            setTimeout(function(){
+                deltask.remove();
+            },500)
+            
+       }   
     });
 }
 
+
+
+
 var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-var today = new Date()
-var date = days[today.getDay()]+' '+ today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-var time = today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
-var datetime = date+' '+time
-document.getElementById("dispdatetime").innerHTML = datetime;
+function daytime(){
+    var today = new Date()
+    var day = days[today.getDay()];
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var mins = today.getMinutes();
+    var secs = today.getSeconds();
+    mins = doubledigit(mins);
+    secs = doubledigit(secs);
+    var time = today.getHours()+':'+mins+':'+secs;
+    var datetime = day +' '+ date +' '+ time;
+    setTimeout(daytime,500);
+    document.getElementById("dispdatetime").innerHTML = datetime;
+}
+daytime()
+function doubledigit(i){
+    if(i<10){
+        i="0"+i;
+    return i;
+    }
+    else{
+        return i;
+    }
+}
+/*
+$(document).ready(function(){
+    $(checkbtn).click(function(){
+        $(this.parentNode).fadeOut(3000);
+    })
+})*/
+
