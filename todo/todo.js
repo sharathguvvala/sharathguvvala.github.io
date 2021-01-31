@@ -7,6 +7,7 @@ if(window.screen.width<500) {
 function username(){
     username = prompt("Please enter your name","stranger");
     document.getElementById("usertext").innerHTML ="Hello,"+username;
+    document.getElementById("btne").remove();
 }
 
 
@@ -34,7 +35,6 @@ function addTask(task){
 
     checkbtn.innerHTML = '<i class="fa fa-check"></i>';
     trashbtn.innerHTML = '<i class="fa fa-trash"></i>';
-    console.log(checkbtn)
 
     if(input.value==''){
         alert('Please enter a valid task');
@@ -56,9 +56,9 @@ function addTask(task){
             
             setTimeout(function(){
                 //completedtask.remove();
-               /* $(document).ready(function(){
-                    $("button").click(function(){
-                        $(this.parentNode).fadeOut(3000);
+                /*$(document).ready(function(){
+                    $("checkbtn").click(function(){
+                        $("li").fadeOut(3000);
                     })
                 })*/
                 Completed.appendChild(completedtask);
