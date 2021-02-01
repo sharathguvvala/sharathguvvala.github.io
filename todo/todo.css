@@ -145,9 +145,9 @@ h3{
 }
 li{
     opacity: 0;
-    animation: new-item-animation .4s linear forwards;
+    animation: list-animation .4s linear forwards;
 }
-@keyframes new-item-animation{
+@keyframes list-animation{
     from{
         opacity: 0;
         transform: translateX(-300px);

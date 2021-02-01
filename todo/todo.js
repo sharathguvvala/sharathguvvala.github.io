@@ -26,15 +26,19 @@ input.addEventListener("keyup", function(event) {
 function addTask(task){
     const notcompleted = document.querySelector('.notcompleted');
     const Completed = document.querySelector('.completed');
+   
      
 
     const newLi = document.createElement('li');
     const checkbtn = document.createElement('button');
     const trashbtn = document.createElement('button');
+    const redobtn = document.createElement('button');
     
 
     checkbtn.innerHTML = '<i class="fa fa-check"></i>';
     trashbtn.innerHTML = '<i class="fa fa-trash"></i>';
+    redobtn.innerHTML  =  '<i class="fas fa-redo-alt"></i>';
+
 
     if(input.value==''){
         alert('Please enter a valid task');
@@ -46,7 +50,6 @@ function addTask(task){
         notcompleted.appendChild(newLi);
         newLi.appendChild(trashbtn);
         newLi.appendChild(checkbtn);      
-
     }
 
     checkbtn.addEventListener('click',function(){
@@ -62,13 +65,21 @@ function addTask(task){
                     })
                 })*/
                 Completed.appendChild(completedtask);
-                checkbtn.style.display='none';
-            },500)
+                
+            },200)
+            checkbtn.style.display='none';
+            newLi.appendChild(redobtn);             
            
        // }
         
     });
-
+    redobtn.addEventListener('click',function(){
+        const redotask = this.parentNode;
+        checkbtn.style.display='block'
+        notcompleted.appendChild(redotask);
+        redobtn.style.display = 'none';
+        
+    });
     trashbtn.addEventListener('click',function(){
         const deltask = this.parentNode;
         var b = confirm('Are you sure to delete the task!!!')
