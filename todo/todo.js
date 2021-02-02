@@ -5,7 +5,7 @@ if(window.screen.width<500) {
 }
 
 function username(){
-    username = prompt("Please enter your name","stranger");
+    username = prompt("Please enter your name","user");
     document.getElementById("usertext").innerHTML ="Hello,"+username;
     document.getElementById("btne").remove();
 }
@@ -113,6 +113,8 @@ function doubledigit(i){
         return i;
     }
 }
+
+
 /*
 $(document).ready(function(){
     $(checkbtn).click(function(){

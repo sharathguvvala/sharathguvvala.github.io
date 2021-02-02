@@ -146,6 +146,15 @@ h3{
     outline: none;
     border: none;
 }
+#btnes{
+    margin: 15px 0 0 20px;
+    outline: none;
+    border: none;
+}
+#btnes:focus{
+    outline: none;
+    border: none;
+}
 li{
     opacity: 0;
     animation: list-animation .4s linear forwards;
@@ -161,5 +170,5 @@ li{
     }
 }
 dl{
-    margin: 20px 5px 0 20px;  
+    margin: 20px 5px 0 20px;
 }
