@@ -60,6 +60,8 @@ h3{
 .notcompleted {
     list-style: none;
     width: 90%;
+    word-wrap: break-word;
+    word-break: break-all
 }
 .notcompleted  li{
     padding: 15px;
@@ -75,6 +77,8 @@ h3{
 .completed {
     list-style: none;
     width: 90%;
+    word-wrap: break-word;
+    word-break: break-all
 }
 .completed li{
     padding: 15px;
