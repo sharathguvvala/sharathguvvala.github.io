@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <div class="containers">
+        <div class="row">
+            <div class="col-9">
+                <div class="logo">
+                    <i class="fab fa-quinscape"></i><span>iuz</span>
+                </div>
+            </div>
+            <div class="col-3" id="time">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8" id="questions">
+                <div id="question">
+                </div>
+                <ul id="options">
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                buttons
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <div id="prevbtn">
+                 <button class="btn btn-primary">Previous Question</button>
+            </div>
+            <div id="nextbtn">
+                <button class="btn btn-primary">Next Question</button>
+            </div>
+            <div id="endbtn">
+                <button class="btn btn-outline-danger">End Quiz</button>
+            </div>
+        </div>  
+        
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>

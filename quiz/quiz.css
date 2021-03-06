@@ -1,0 +1,58 @@
+.logo{
+    font-size: 5em;
+    padding: 40px;
+    color: gray;
+}
+#time{
+    font-size: 2em;
+    padding: 40px;
+}
+@media only screen and (max-width:500px){
+    .logo{
+        font-size: 2em;
+    }
+    #time{
+        font-size: 1em;
+        padding: 40px 5px 0px 10px;
+    }
+}
+*{
+    background-color: white;
+}
+#questions{
+    display: flex;
+    flex-direction: column;
+}
+#question{
+    font-size: 2em;
+    margin: 20px 0px 10px 50px;
+}
+#options{
+    list-style-type: none;
+}
+.option{
+    background-color: whitesmoke;
+    width: 400px;
+    border: 2px solid transparent;
+    margin: 20px 10px;
+    padding: 10px 20px;
+}
+.option:hover{
+    border: 2px solid green;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.buttons{
+    margin: 50px;
+}
+.disable{
+    cursor: none;
+    color: tomato;
+}
+.selected{
+    background-color: black;
+}
