@@ -59,24 +59,30 @@ if(question_num=0){
     prevbtn.style.display = "none";
 }
 console.log(questions[question_num].question)
-window.onload = firstquestion()
-function firstquestion(){
-    question.innerHTML = `1) ${questions[0].question}`
-    options.innerHTML = `<ul id="options"><li class="option">${questions[0].options[0]}</li><li class="option">${questions[0].options[1]}</li><li class="option">${questions[0].options[2]}</li><li class="option">${questions[0].options[3]}</li></ul>`
+window.onload = showquestion()
+function showquestion(){
+    question.innerHTML = `${question_num+1}) ${questions[question_num].question}`
+    options.innerHTML = `<ul id="options"><li class="option">${questions[question_num].options[0]}</li><li class="option">${questions[question_num].options[1]}</li><li class="option">${questions[question_num].options[2]}</li><li class="option">${questions[question_num].options[3]}</li></ul>`
 }
+//function firstquestion(){
+    //question.innerHTML = `1) ${questions[0].question}`
+    //options.innerHTML = `<ul id="options"><li class="option">${questions[0].options[0]}</li><li class="option">${questions[0].options[1]}</li><li class="option">${questions[0].options[2]}</li><li class="option">${questions[0].options[3]}</li></ul>`
+//}
 function nextquestion(){
     question_num++;
     console.log(questions[question_num].question)
-    question.innerHTML = `${question_num+1}) ${questions[question_num].question}`
-    console.log(questions[question_num].options[0])
-    options.innerHTML = `<ul id="options"><li class="option">${questions[question_num].options[0]}</li><li class="option">${questions[question_num].options[1]}</li><li class="option">${questions[question_num].options[2]}</li><li class="option">${questions[question_num].options[3]}</li></ul>`
+    showquestion()
+    //question.innerHTML = `${question_num+1}) ${questions[question_num].question}`
+    //console.log(questions[question_num].options[0])
+    //options.innerHTML = `<ul id="options"><li class="option">${questions[question_num].options[0]}</li><li class="option">${questions[question_num].options[1]}</li><li class="option">${questions[question_num].options[2]}</li><li class="option">${questions[question_num].options[3]}</li></ul>`
 }
 function prevquestion(){
     question_num--;
     console.log(questions[question_num].question)
-    question.innerHTML = `${question_num+1}) ${questions[question_num].question}`
-    console.log(questions[question_num].options[0])
-    options.innerHTML = `<ul id="options"><li class="option">${questions[question_num].options[0]}</li><li class="option">${questions[question_num].options[1]}</li><li class="option">${questions[question_num].options[2]}</li><li class="option">${questions[question_num].options[3]}</li></ul>`
+    showquestion()
+    //question.innerHTML = `${question_num+1}) ${questions[question_num].question}`
+    //console.log(questions[question_num].options[0])
+    //options.innerHTML = `<ul id="options"><li class="option">${questions[question_num].options[0]}</li><li class="option">${questions[question_num].options[1]}</li><li class="option">${questions[question_num].options[2]}</li><li class="option">${questions[question_num].options[3]}</li></ul>`
 }
 let option = document.querySelectorAll("li.option");
 console.log(option)
