@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+img{
+    width: 40vw;
+    height: 80vh;
+    border-radius: 50%;
+    padding:60px 20px 10px 80px;
+}
+h3{
+    padding: 40px 20px 10px 10px;
+    font-family: 'Akaya Telivigala', cursive;
+}
+h4{
+    padding: 10px 10px 20px 10px;
+    font-family: 'Cairo', sans-serif;
+}
+h2{
+    padding: 50px 20px 5px 10px;
+    color: darkgreen;
+}
+h5{
+    padding: 70px 20px 10px 10px;
+}
+body{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.8)), url(image.jpeg);
+}
+#facebook{
+    color: #1877f2;
+    font-size: 50px;
+    margin: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#instagram{
+    color:  #c32aa3 ;
+    font-size: 50px;
+    margin: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#twitter{
+    color:  #1da1f2;
+    font-size: 50px;
+    margin: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#wikipedia{
+    color:  #1da1f2;
+    font-size: 50px;
+    margin:30px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#facebook:hover{
+    border-bottom: 3px solid blue;
+}
+#instagram:hover{
+    text-decoration: underline;
+}
+#twitter:hover{
+    text-decoration: underline;
+}
+#wikipedia:hover{
+    text-decoration: underline;
+}
+input[type="text"]{
+    margin-left: 20px;
+    border: 2px solid gray;
+}
+input[type="tel"]{
+    margin-left: 20px;
+    border: 2px solid gray;
+}
+input[type="text"]:hover{
+    border: 2px solid green;
+}
+input[type="tel"]:hover{
+    border: 2px solid green;
+}
+input[type="submit"]{
+    margin-left: 30px;
+}
+@media only screen and (max-width:500px){
+    img{
+        width: 50vw;
+        height: 25vh;
+        margin-left: 20px;
+        margin: 20px 10px 10px 20px;
+        padding: 10px;
+    }
+    input[type="submit"]{
+        margin-left: 60px;
+    }
+    .det{
+        margin-left: 40px;
+    }
+    h2,h3,h4,h5{
+        padding: 10px 40px 10px 40px;
+    }
+    input[type="text"]{
+        margin-left: 40px;
+    }
+    input[type="tel"]{
+        margin-left: 40px;
+    }
+    #twitter,#facebook,#instagram{
+        font-size: 30px;
+        margin: 20px 15px 15px 5px;
+    }
+    #wikipedia{
+        font-size: 30px;
+        margin: 20px 15px 15px 40px;
+    }
+}

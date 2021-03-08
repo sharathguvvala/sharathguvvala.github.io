@@ -1,11 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 .logo{
     font-size: 5em;
-    padding: 40px;
+    padding: 25px;
     color: gray;
+}
+.containers{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.8)), url(image1.jpeg);
 }
 #time{
     font-size: 2em;
-    padding: 40px;
+    padding: 25px;
+}
+#questions{
+    display: flex;
+    flex-direction: column;
+}
+#question{
+    font-size: 35px;
+    font-family: 'Roboto Slab', serif;
+    margin: 20px 0px 10px 50px;
+}
+#options{
+    list-style-type: none;
+}
+.option{
+    background-color:rgb(233, 179, 79);
+    width: 30vw;
+    border: 2px solid transparent;
+    margin: 20px 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'PT Serif', serif;
+}
+.option:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    opacity: 0.6;
+}
+
+.instructions{
+    padding: 20px;
+    font-size: larger;
+    font-family: 'Akaya Telivigala', cursive;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.disable{
+    cursor: none;
+    color: tomato;
+}
+.option.selected {
+    background-color: lightblue;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin: 10px;
+    outline: none;
+    border: none;
+    background-color: gray;
+    border-radius: 3px;
+}
+#btn1:hover,#btn2:hover,#btn3:hover,#btn4:hover,#btn5:hover,#btn6:hover,#btn7:hover,#btn8:hover,#btn9:hover,#btn10:hover{
+    opacity: 0.6;
+}
+#username{
+    font-size: 60px;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(13, 183, 235);
+    font-family: 'Redressed', cursive;
+}
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+#endbtn{
+    background: none;
 }
 @media only screen and (max-width:500px){
     .logo{
@@ -15,44 +105,38 @@
         font-size: 1em;
         padding: 40px 5px 0px 10px;
     }
-}
-*{
-    background-color: white;
-}
-#questions{
-    display: flex;
-    flex-direction: column;
-}
-#question{
-    font-size: 2em;
-    margin: 20px 0px 10px 50px;
-}
-#options{
-    list-style-type: none;
-}
-.option{
-    background-color: whitesmoke;
-    width: 400px;
-    border: 2px solid transparent;
-    margin: 20px 10px;
-    padding: 10px 20px;
-}
-.option:hover{
-    border: 2px solid green;
-}
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-}
-.buttons{
-    margin: 50px;
-}
-.disable{
-    cursor: none;
-    color: tomato;
-}
-.selected{
-    background-color: black;
+    #question{
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    #username{
+        font-size: 30px;
+    }
+    .instructions{
+        font-size: small;
+        padding: 10px;
+    }
+    .option{
+        width: 70vw;
+        padding: 2px 2px 2px 10px;
+    }
+    #drop{
+        font-size: small;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #prevbtn,#nextbtn,#endbtn{
+        margin-bottom: 10px;
+        
+        text-align: center;
+    }
+    #btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10{
+        width: 40px;
+        height: 25px;
+    }
 }

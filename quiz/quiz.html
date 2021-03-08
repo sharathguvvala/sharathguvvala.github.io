@@ -17,14 +17,13 @@
         <div class="row">
             <div class="col-9">
                 <div class="logo">
-                    <i class="fab fa-quinscape"></i><span>iuz</span>
+                    <i class="fab fa-quinscape" style="color: orange;"></i><span style="color: rgb(13, 183, 235);">iuz</span>
                 </div>
             </div>
-            <div class="col-3" id="time">
-            </div>
+            <div class="col-3" id="time"></div>
         </div>
         <div class="row">
-            <div class="col-8" id="questions">
+            <div class="col-md-8 col-sm-12" id="questions">
                 <div id="question">
                 </div>
                 <div id="options">
@@ -37,20 +36,53 @@
                     <li class="option"></li>
                 </ul>-->
             </div>
-            <div class="col-4">
-                buttons
+            <div class="col-md-4 col-sm-12">
+                <div class="instructions">
+                    <div id="username">Hello </div>
+                    <!--<div class="heading"><i><b>Instructions</b></i></div>-->
+                    <div class="dropdown">
+                        <button type="button" id="drop" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Instructions</button>
+                        <div class="dropdown-menu bg-dark text-white">
+                            <ul>
+                                <li>Quiz contains 10 questions.</li>
+                                <li>Each queston carries <b>Two(1)</b> mark.</li>
+                                <li>For each wrong answer <b>One(1)</b> mark will be deducted.</li>
+                                <li>No mark will be deducted for the not attempted questions.</li>
+                                <li>You should attempt the question compulsorily if you have selected an option even at once.</li>
+                                <li>To avoid negative marking you need to avoid selecting an option because there is no option to diselect the option apart from changing the option.</li>
+                                <li>You need to click on <b>"Save & Next Question"</b> button for saving the answer.</li>    
+                            </ul> 
+                            
+                        </div>
+                      </div>
+                </div>
+                <div class="btns">
+                    <div class="col-md-12 col-sm-12" class="row1">
+                        <button id="btn1" onclick="btn1q()">1</button>
+                        <button id="btn2" onclick="btn2q()">2</button>
+                        <button id="btn3" onclick="btn3q()">3</button>
+                        <button id="btn4" onclick="btn4q()">4</button>
+                        <button id="btn5" onclick="btn5q()">5</button>
+                    <!--</div>-->
+                    <!--<div class="col-md-12 col-sm-12" class="row2">-->
+                        <button id="btn6" onclick="btn6q()">6</button>
+                        <button id="btn7" onclick="btn7q()">7</button>
+                        <button id="btn8" onclick="btn8q()">8</button>
+                        <button id="btn9" onclick="btn9q()">9</button>
+                        <button id="btn10" onclick="btn10q()">10</button>
+                    </div>
+                </div>
             </div>
         </div>
-        
         <div class="buttons">
             <div id="prevbtn">
-                 <button class="btn btn-primary">Previous Question</button>
+                 <button class="btn btn-primary btn-md">Previous Question</button>
             </div>
             <div id="nextbtn">
-                <button class="btn btn-primary">Next Question</button>
+                <button class="btn btn-primary btn-md">Save & Next Question</button>
             </div>
             <div id="endbtn">
-                <button class="btn btn-outline-danger">End Quiz</button>
+                <button class="btn btn-outline-danger btn-md" onclick="endquiz()">Save & End Quiz</button>
             </div>
         </div>  
         

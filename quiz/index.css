@@ -1,0 +1,74 @@
+/*body{
+    background-image:linear-gradient(rgba(247, 241, 241, 0.8),rgba(238, 229, 229, 0.6)), url(image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+.containers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image:linear-gradient(rgba(241, 237, 237, 0.9),rgba(255, 255, 255, 0.8)), url(bi1.jpeg);
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;    
+}
+.logo{
+    font-size: 5em;
+    padding: 5px;
+    color: gray;
+}
+.heading{
+    font-size: xx-large;
+}
+.instructions{
+    padding: 15px;
+    margin-bottom: 0px;
+    font-size: x-large;
+    font-family: 'Redressed', cursive;
+}
+.nametag{
+    margin-left: 25px;
+    font-size: xx-large;
+    font-family: 'Akaya Kanadaka', cursive;
+}
+input[type="text"]{
+    border: none;
+    background-color: lightblue;
+    outline: none;
+    border: 3px solid transparent;
+    font-size: medium;
+    margin-left: 25px;
+}
+input[type="text"]:hover{
+    border: 3px solid green;  
+}
+.startbtn{
+    margin: 20px;
+}
+@media only screen and (max-width:500px){
+    .logo{
+        font-size: 2em;
+        padding: 20px;
+    }
+    .heading{
+        font-size: medium;
+    }
+    .instructions{
+        font-size: small;
+        padding: 10px;
+    }
+    .nametag{
+        font-size: medium;
+        font-weight: 400;
+        padding: auto;
+    }
+    input[type="text"]{
+        font-size: 10px;
+        padding: 3px;
+        margin: 5px;
+    }
+}

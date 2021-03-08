@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <div class="containers">
+        <div class="logo">
+            <i class="fab fa-quinscape" style="color: orange;"></i><span style="color: rgb(13, 183, 235);">iuz</span>
+        </div>
+        <div class="instructions">
+            <div class="heading"><i><b>Instructions</b></i></div>
+            <ul>
+                <li>Quiz contains 10 questions.</li>
+                <li>Each queston carries <b>Two(2)</b> mark.</li>
+                <li>For each wrong answer <b>One(1)</b> mark will be deducted.</li>
+                <li>No mark will be deducted for the not attempted questions.</li>
+                <li>You should attempt the question compulsorily if you have selected an option even at once.</li>
+                <li>To avoid negative marking you need to avoid selecting an option because there is no option to diselect the option apart from changing the option.</li>
+                <li>For your convenience, attempted questions are marked <b>green</b> and not attemptrd questions are marked <b>red</b> to segregate from them from unseen questions.</li>
+                <li>Buttons of the respected questions will be marked only when you click on "Save and Next Button".</li>
+                <li>You can also change between questions through buttons provided to the right of your screen.</li>
+                <li>Time limit for the quiz is <b><strong>3</strong></b> min.</li>    
+            </ul>
+        </div>
+        
+        <form>
+            <label for="name"><div class="nametag">Enter your name:</div></label>
+            <input type="text" id="name" required autocomplete="off" value="">
+        </form>
+        <div class="startbtn">
+            <button class="btn btn-dark btn-md" id="start">Start Quiz</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
