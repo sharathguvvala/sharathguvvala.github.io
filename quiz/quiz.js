@@ -1,6 +1,6 @@
 let username = sessionStorage.getItem("username")
 document.getElementById("username").innerHTML += username
-/*const min = 0.2;
+const min = 3;
 let totaltime = min*60;
 const time = document.getElementById("time");
 setInterval(timer,1000);
@@ -17,7 +17,7 @@ function timer(){
         time.innerHTML = "TIME UP!!!"
         setTimeout(function(){ window.open("end.html","_parent",false); }, 500);
     };
-};*/
+};
 let questions = [
     {
         index:1,
@@ -164,26 +164,36 @@ function showquestion(){
 var useranswers = [0,0,0,0,0,0,0,0,0,0]
 //console.log(useranswers)
 function nextquestion(){
+    document.getElementById("btn1").classList.remove("disabled")
+    document.getElementById("btn2").classList.remove("disabled")
+    document.getElementById("btn3").classList.remove("disabled")
+    document.getElementById("btn4").classList.remove("disabled")
+    document.getElementById("btn5").classList.remove("disabled")
+    document.getElementById("btn6").classList.remove("disabled")
+    document.getElementById("btn7").classList.remove("disabled")
+    document.getElementById("btn8").classList.remove("disabled")
+    document.getElementById("btn9").classList.remove("disabled")
+    document.getElementById("btn10").classList.remove("disabled")
     document.getElementById("prevbtn").classList.remove("disabled")
     let option = document.querySelectorAll("li.option");
     for (let i = 0; i < option.length; i++){
         if(option[i].classList.contains("selected")){
             let useranswer = document.querySelector("li.option.selected").innerHTML;
             if(useranswer==questions[question_num].answer){
-                useranswers.splice(question_num,1,"correct")
+                useranswers.splice(question_num,1,"c")
             }
             else if(useranswer!==questions[question_num].answer){
-                useranswers.splice(question_num,1,"wrong")
+                useranswers.splice(question_num,1,"w")
             }
         }
     }
     var tscore = 0 , pscore = 0 , nscore = 0;
     //console.log(useranswers)
     for(var j=0 ; j<useranswers.length ; j++){
-        if(useranswers[j]=="correct"){
+        if(useranswers[j]=="c"){
             pscore+=2
         }
-        else if(useranswers[j]=="wrong"){
+        else if(useranswers[j]=="w"){
             nscore+=1
         }
     }
@@ -239,6 +249,19 @@ function selected() {
             }
         option[i].classList.add("selected");
         document.getElementById("prevbtn").classList.add("disabled")
+        if(question_num!=9){
+            document.getElementById("btn1").classList.add("disabled")
+            document.getElementById("btn2").classList.add("disabled")
+            document.getElementById("btn3").classList.add("disabled")
+            document.getElementById("btn4").classList.add("disabled")
+            document.getElementById("btn5").classList.add("disabled")
+            document.getElementById("btn6").classList.add("disabled")
+            document.getElementById("btn7").classList.add("disabled")
+            document.getElementById("btn8").classList.add("disabled")
+            document.getElementById("btn9").classList.add("disabled")
+            document.getElementById("btn10").classList.add("disabled")
+        }
+        
       };
     }
 }
@@ -357,21 +380,22 @@ function endquiz(){
         if(option[i].classList.contains("selected")){
             let useranswer = document.querySelector("li.option.selected").innerHTML;
             if(useranswer==questions[question_num].answer){
-                useranswers.splice(question_num,1,"correct")
+                useranswers.splice(question_num,1,"c")
                 
             }
             else if(useranswer!==questions[question_num].answer){
-                useranswers.splice(question_num,1,"wrong")   
+                useranswers.splice(question_num,1,"w")   
             }
         }  
     }
     var tscore = 0 , pscore = 0 , nscore = 0;
-    console.log(useranswers)
+    sessionStorage.setItem("useranswers",useranswers)
+    //console.log(useranswers)
     for(var j=0 ; j<useranswers.length ; j++){
-        if(useranswers[j]=="correct"){
+        if(useranswers[j]=="c"){
             pscore+=2
         }
-        else if(useranswers[j]=="wrong"){
+        else if(useranswers[j]=="w"){
             nscore+=1
         }
     }

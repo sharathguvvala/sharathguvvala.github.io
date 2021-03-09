@@ -15,7 +15,8 @@
 }
 #time{
     font-size: 2em;
-    padding: 25px;
+    font-weight: 800;
+    padding: 40px 20px 10px 0px;
 }
 #questions{
     display: flex;
@@ -28,6 +29,7 @@
 }
 #options{
     list-style-type: none;
+    padding-left: 30px;
 }
 .option{
     background-color:rgb(233, 179, 79);
@@ -97,24 +99,34 @@
 #endbtn{
     background: none;
 }
+#footer{
+    right: 5px;
+    bottom: 10px;
+    position: absolute;
+}
 @media only screen and (max-width:500px){
     .logo{
-        font-size: 2em;
+        font-size: 3em;
+        padding: 15px 15px 5px 15px;
     }
     #time{
-        font-size: 1em;
-        padding: 40px 5px 0px 10px;
+        font-size: 1.5em;
+        font-weight: 500;
+        padding: 60px 10px 0px 0px;
     }
     #question{
         font-size: 20px;
         margin-right: 5px;
+        margin-left: 15px;
     }
     #username{
         font-size: 30px;
     }
     .instructions{
-        font-size: small;
         padding: 10px;
+    }
+    #options{
+        padding-left: 10px;
     }
     .option{
         width: 70vw;
@@ -138,5 +150,12 @@
     #btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10{
         width: 40px;
         height: 25px;
+    }
+    #content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #footer{
+        display: none;
     }
 }

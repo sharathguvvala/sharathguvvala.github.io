@@ -70,20 +70,37 @@ body{
 }
 input[type="text"]{
     margin-left: 20px;
-    border: 2px solid gray;
+    border: none;
+    background: none;
+    border-bottom: 3px solid gray;
+    outline: none;
 }
 input[type="tel"]{
     margin-left: 20px;
-    border: 2px solid gray;
+    border: none;
+    background: none;
+    border-bottom: 3px solid gray;
+    outline: none;
 }
 input[type="text"]:hover{
-    border: 2px solid green;
+    border-bottom: 3px solid green;
 }
 input[type="tel"]:hover{
-    border: 2px solid green;
+    border-bottom: 3px solid green;
 }
 input[type="submit"]{
     margin-left: 30px;
+}
+#aq,#uq,#cq,#wq{
+    padding: 5px;
+}
+#drop{
+    margin: 10px 10px 10px 20px;
+}
+#footer{
+    right: 5px;
+    bottom: 5px;
+    position: absolute;
 }
 @media only screen and (max-width:500px){
     img{
@@ -115,5 +132,11 @@ input[type="submit"]{
     #wikipedia{
         font-size: 30px;
         margin: 20px 15px 15px 40px;
+    }
+    #drop{
+        margin: 10px 30px 20px 50px;
+    }
+    #footer{
+        display: none;
     }
 }
