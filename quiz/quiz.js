@@ -137,13 +137,11 @@ let prevbtn = document.getElementById("prevbtn");
 nextbtn.addEventListener("click",nextquestion);
 prevbtn.addEventListener("click",prevquestion);
 let question_num = 0;
-let index_question=0;
 if(question_num=0){
     prevbtn.style.display = "none";
 }
 window.onload = showquestion()
 function showquestion(){
-    index_question=questions[index_question].index
     if(question_num==0){
         document.getElementById("prevbtn").classList.add("disabled")
     }
@@ -218,7 +216,6 @@ function nextquestion(){
     question.innerHTML = `${question_num+1}) ${questions[question_num].question}`
     options.innerHTML = `<ul id="options"><li class="option">${questions[question_num].options[0]}</li><li class="option">${questions[question_num].options[1]}</li><li class="option">${questions[question_num].options[2]}</li><li class="option">${questions[question_num].options[3]}</li></ul>`
     selected();
-    
 }
 function prevquestion(){
     question_num=(questions[question_num].index)-2;
@@ -242,6 +239,10 @@ function selected() {
     let option = document.querySelectorAll("li.option");
     for (let i = 0; i < option.length; i++) {
         option[i].onclick = function() {
+            console.log(Option[i])
+            if (option[i].classList.contains("selected")) {
+                option[i].classList.remove("selected");
+            }
             for (let i = 0; i < option.length; i++) {
                 if (option[i].classList.contains("selected")) {
                 option[i].classList.remove("selected");
@@ -261,19 +262,9 @@ function selected() {
             document.getElementById("btn9").classList.add("disabled")
             document.getElementById("btn10").classList.add("disabled")
         }
-        
-      };
+      }
     }
 }
-/*console.log(useranswers)
-for(var i=0 ; i<useranswers.length ; i++){
-    if(useranswers[i]=="correct"){
-        pscore=1
-    }
-    if(useranswers[i]=="wrong"){
-        nscore=1
-    }
-}*/
 let btn1 = document.getElementById("btn1")
 let btn2 = document.getElementById("btn2")
 let btn3 = document.getElementById("btn3")
@@ -380,8 +371,7 @@ function endquiz(){
         if(option[i].classList.contains("selected")){
             let useranswer = document.querySelector("li.option.selected").innerHTML;
             if(useranswer==questions[question_num].answer){
-                useranswers.splice(question_num,1,"c")
-                
+                useranswers.splice(question_num,1,"c")   
             }
             else if(useranswer!==questions[question_num].answer){
                 useranswers.splice(question_num,1,"w")   
