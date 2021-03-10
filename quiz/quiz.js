@@ -1,4 +1,4 @@
-let username = localStorage.getItem("username")
+let username = sessionStorage.getItem("username")
 document.getElementById("username").innerHTML += username
 let questions = [
     {
@@ -222,7 +222,7 @@ function selected() {
     let option = document.querySelectorAll("li.option");
     for (let i = 0; i < option.length; i++) {
         option[i].onclick = function() {
-            console.log(Option[i])
+            //console.log(Option[i])
             if (option[i].classList.contains("selected")) {
                 option[i].classList.remove("selected");
             }
@@ -374,7 +374,7 @@ function endquiz(){
     }
     tscore = pscore-nscore
     sessionStorage.setItem("tscore",tscore)
-    console.log(tscore)
+    //console.log(tscore)
     if(confirm("Are you sure to end the quiz ?")){
         window.open("end.html","_parent","false");
     }
@@ -391,7 +391,7 @@ function notattempted(){
         }
     }
 }
-const min = 0.1;
+const min = 5;
 let totaltime = min*60;
 const time = document.getElementById("time");
 setInterval(timer,1000);

@@ -12,7 +12,7 @@ if(useranswers==undefined){
 }
 else{
     for(var k=0 ; k<useranswers.length ; k++){
-        console.log(useranswers[k])
+        //console.log(useranswers[k])
         if(useranswers[k]=="c"){
             cq+=1
         }
