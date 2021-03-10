@@ -8,7 +8,7 @@ function startquiz(){
     }
     else{
         let username = document.getElementById("name");
-        localStorage.setItem("username", username.value);
+        sessionStorage.setItem("username", username.value);
         window.open("quiz.html","_parent","false");
     }
 }

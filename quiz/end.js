@@ -1,6 +1,6 @@
-let username = localStorage.getItem("username")
-let tscore = localStorage.getItem("tscore")
-let useranswers = localStorage.getItem("useranswers")
+let username = sessionStorage.getItem("username")
+let tscore = sessionStorage.getItem("tscore")
+let useranswers = sessionStorage.getItem("useranswers")
 //console.log(useranswers)
 let aq=0,uq=0,cq=0,wq=0;
 if(useranswers==undefined){

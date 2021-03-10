@@ -1,23 +1,5 @@
 let username = localStorage.getItem("username")
 document.getElementById("username").innerHTML += username
-const min = 0.1;
-let totaltime = min*60;
-const time = document.getElementById("time");
-setInterval(timer,1000);
-function timer(){
-    const minutes = Math.floor(totaltime/60);
-    let seconds = totaltime%60;
-    seconds = seconds<10 ? "0"+seconds : seconds;
-    time.innerHTML = `${minutes}:${seconds}`;
-    totaltime--;
-    if(totaltime<60){
-        time.style.color="red"
-    };
-    if(totaltime<0){
-        time.innerHTML = "TIME UP!!!"
-        setTimeout(function(){ window.open("end.html","_parent",false); }, 500);
-    };
-};
 let questions = [
     {
         index:1,
@@ -187,6 +169,7 @@ function nextquestion(){
     }
     var tscore = 0 , pscore = 0 , nscore = 0;
     //console.log(useranswers)
+    sessionStorage.setItem("useranswers",useranswers)
     for(var j=0 ; j<useranswers.length ; j++){
         if(useranswers[j]=="c"){
             pscore+=2
@@ -196,7 +179,7 @@ function nextquestion(){
         }
     }
     tscore = pscore-nscore
-    localStorage.setItem("tscore",tscore)
+    sessionStorage.setItem("tscore",tscore)
     //console.log(tscore)
     question_num=questions[question_num].index;
     marking()
@@ -379,7 +362,7 @@ function endquiz(){
         }  
     }
     var tscore = 0 , pscore = 0 , nscore = 0;
-    localStorage.setItem("useranswers",useranswers)
+    sessionStorage.setItem("useranswers",useranswers)
     //console.log(useranswers)
     for(var j=0 ; j<useranswers.length ; j++){
         if(useranswers[j]=="c"){
@@ -390,7 +373,7 @@ function endquiz(){
         }
     }
     tscore = pscore-nscore
-    localStorage.setItem("tscore",tscore)
+    sessionStorage.setItem("tscore",tscore)
     console.log(tscore)
     if(confirm("Are you sure to end the quiz ?")){
         window.open("end.html","_parent","false");
@@ -408,3 +391,34 @@ function notattempted(){
         }
     }
 }
+const min = 0.1;
+let totaltime = min*60;
+const time = document.getElementById("time");
+setInterval(timer,1000);
+function timer(){
+    const minutes = Math.floor(totaltime/60);
+    let seconds = totaltime%60;
+    seconds = seconds<10 ? "0"+seconds : seconds;
+    time.innerHTML = `${minutes}:${seconds}`;
+    totaltime--;
+    if(totaltime<60){
+        time.style.color="red"
+    };
+    if(totaltime<0){
+        var tscore = 0 , pscore = 0 , nscore = 0;
+        sessionStorage.setItem("useranswers",useranswers)
+        //console.log(useranswers)
+        for(var j=0 ; j<useranswers.length ; j++){
+            if(useranswers[j]=="c"){
+                pscore+=2
+            }
+            else if(useranswers[j]=="w"){
+                nscore+=1
+            }
+        }
+        tscore = pscore-nscore
+        sessionStorage.setItem("tscore",tscore)
+        time.innerHTML = "TIME UP!!!"
+        setTimeout(function(){ window.open("end.html","_parent",false); }, 500);
+    };
+};
