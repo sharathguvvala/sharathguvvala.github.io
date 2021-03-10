@@ -391,7 +391,7 @@ function notattempted(){
         }
     }
 }
-const min = 5;
+const min = 3;
 let totaltime = min*60;
 const time = document.getElementById("time");
 setInterval(timer,1000);
