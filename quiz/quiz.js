@@ -1,6 +1,6 @@
 let username = localStorage.getItem("username")
 document.getElementById("username").innerHTML += username
-/*const min = 0.1;
+const min = 0.1;
 let totaltime = min*60;
 const time = document.getElementById("time");
 setInterval(timer,1000);
@@ -17,7 +17,7 @@ function timer(){
         time.innerHTML = "TIME UP!!!"
         setTimeout(function(){ window.open("end.html","_parent",false); }, 500);
     };
-};*/
+};
 let questions = [
     {
         index:1,
