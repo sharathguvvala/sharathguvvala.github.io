@@ -1,6 +1,6 @@
 let username = sessionStorage.getItem("username")
 document.getElementById("username").innerHTML += username
-const min = 3;
+const min = 0.1;
 let totaltime = min*60;
 const time = document.getElementById("time");
 setInterval(timer,1000);
