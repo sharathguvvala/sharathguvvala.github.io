@@ -1,6 +1,6 @@
-let username = sessionStorage.getItem("username")
+let username = localStorage.getItem("username")
 document.getElementById("username").innerHTML += username
-const min = 0.1;
+/*const min = 0.1;
 let totaltime = min*60;
 const time = document.getElementById("time");
 setInterval(timer,1000);
@@ -17,7 +17,7 @@ function timer(){
         time.innerHTML = "TIME UP!!!"
         setTimeout(function(){ window.open("end.html","_parent",false); }, 500);
     };
-};
+};*/
 let questions = [
     {
         index:1,
@@ -196,7 +196,7 @@ function nextquestion(){
         }
     }
     tscore = pscore-nscore
-    sessionStorage.setItem("tscore",tscore)
+    localStorage.setItem("tscore",tscore)
     //console.log(tscore)
     question_num=questions[question_num].index;
     marking()
@@ -379,7 +379,7 @@ function endquiz(){
         }  
     }
     var tscore = 0 , pscore = 0 , nscore = 0;
-    sessionStorage.setItem("useranswers",useranswers)
+    localStorage.setItem("useranswers",useranswers)
     //console.log(useranswers)
     for(var j=0 ; j<useranswers.length ; j++){
         if(useranswers[j]=="c"){
@@ -390,7 +390,7 @@ function endquiz(){
         }
     }
     tscore = pscore-nscore
-    sessionStorage.setItem("tscore",tscore)
+    localStorage.setItem("tscore",tscore)
     console.log(tscore)
     if(confirm("Are you sure to end the quiz ?")){
         window.open("end.html","_parent","false");
